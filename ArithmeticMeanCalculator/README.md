@@ -1,0 +1,3 @@
+# ArithmeticMeanCalculator
+
+![Screenshot](screenshot.jpg)
