@@ -18,8 +18,13 @@
 7.3. [While Loop](#73-While-Loop)  
 7.4. [Do While Loop](#74-Do-While-Loop)  
 7.5. [Do Until Loop](#75-Do-Until-Loop)
+8. [Conditional Statements](#8-Conditional-Statements)  
+8.1. [If Statement](#81-If-Statement)  
+8.2. [If Else Statement](#82-If-Else-Statement)  
+8.3. [If ElseIf Else Statement](#83-If-ElseIf-Else-Statement)  
+8.4. [Switch Statement](#84-Switch-Statement)
 
-### 1. Data types
+## 1. Data types
 
 | Data type           | Storage size             | Range                                                                                                                                           |
 |---------------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,13 +42,14 @@
 | String              | 10 bytes + string length | 0 to approximately 2 billion                                                                                                                    |
 | Variant             | 16 bytes                 | Any numeric value up to the range of a Double                                                                                                   |
 
-### 2. Variables
+## 2. Variables
 
 ```vbnet
 Dim x As Integer
 x = 2
 ```
-### 3. Operators
+
+## 3. Operators
 
 | Operator | Description                                                  |
 |:--------:|--------------------------------------------------------------|
@@ -54,7 +60,7 @@ x = 2
 | %        | Modulus operator and the remainder after an integer division |
 | ^        | Exponentiation operator                                      |
 
-### 4. Constant
+## 4. Constant
 
 Constant hold a value that cannot be change during script execution.
 
@@ -67,7 +73,7 @@ Private Sub Test_Constant()
 End Sub
 ```
 
-### 5. Functions
+## 5. Functions
 
 ### 5.1. Function
 
@@ -123,7 +129,7 @@ End Sub
 | Sqr      | number   | Returns a Double specifying the square root of a number                                         |
 | Tan      | number   | Returns a Double specifying the tangent of an angle                                             |
 
-### 6. Comments
+## 6. Comments
 
 Unlike most programming languages, VBA doesn't provide multiline comments.
 
@@ -134,11 +140,13 @@ Example:
 
 Rem this is a comment too
 ```
-### 7. Loops
+
+## 7. Loops
 
 ### 7.1. For Loop
 
 Example:
+
 ```vbnet
 Private Sub Loop_Test()
    ' Count to ten with step by 1
@@ -151,10 +159,243 @@ Private Sub Loop_Test()
 End Sub
 ```
 
+Output:
+
+```
+ 0 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ ```
+
 ### 7.2. For Each Loop
+
+Example:
+
+```vbnet
+Private Sub Loop_Test()
+   ' Define an array
+   items = Array("laptop", "router", "beer")
+   item_number = 1
+   
+   ' Iterating through array using For Each Loop.
+   For Each x In items
+      Debug.Print "Item #" & item_number & " is: " & x
+      item_number = item_number + 1
+   Next
+End Sub
+```
+
+Output:
+
+```
+Item #1 is: laptop
+Item #2 is: router
+Item #3 is: beer
+```
 
 ### 7.3. While Loop
 
+Example:
+
+```vbnet
+Private Sub Loop_Test()
+   Dim current_number, last_number As Integer
+   current_number = 0
+   last_number = 10
+   
+   ' Count to ten using While Loop
+   While current_number < last_number
+      current_number = current_number + 1
+      Debug.Print "Current number is: " & current_number
+   Wend
+End Sub
+```
+
+Output:
+
+```
+Current number is: 1
+Current number is: 2
+Current number is: 3
+Current number is: 4
+Current number is: 5
+Current number is: 6
+Current number is: 7
+Current number is: 8
+Current number is: 9
+Current number is: 10
+```
+
 ### 7.4. Do While Loop
 
+Example:
+
+```vbnet
+Private Sub Loop_Test()
+    ' Count to ten using Do While Loop
+    Do While i < 10
+        i = i + 1
+        Debug.Print "Current value of i is : " & i
+    Loop
+End Sub
+```
+
+Output:
+
+```
+Current value of i is : 1
+Current value of i is : 2
+Current value of i is : 3
+Current value of i is : 4
+Current value of i is : 5
+Current value of i is : 6
+Current value of i is : 7
+Current value of i is : 8
+Current value of i is : 9
+Current value of i is : 10
+```
+
 ### 7.5. Do Until Loop
+
+Example:
+
+```vbnet
+Private Sub Loop_Test()
+    i = 0
+    
+    ' Count to ten using Do Until Loop
+    Do Until i > 9
+        i = i + 1
+        Debug.Print "Current value of i is : " & i
+    Loop
+End Sub
+```
+
+Output:
+
+```
+Current value of i is : 1
+Current value of i is : 2
+Current value of i is : 3
+Current value of i is : 4
+Current value of i is : 5
+Current value of i is : 6
+Current value of i is : 7
+Current value of i is : 8
+Current value of i is : 9
+Current value of i is : 10
+```
+
+## 8. Conditional Statements
+
+### 8.1. If Statement
+
+Example:
+
+```vbnet
+Private Sub Statement_Test()
+    Dim a, b As Integer
+        
+    a = 20
+    b = 10
+    
+    If a > b Then
+        Debug.Print "A is greater than B"
+    End If
+End Sub
+```
+
+Output:
+
+```
+A is greater than B
+```
+
+### 8.2. If Else Statement
+
+Example:
+
+```vbnet
+Private Sub Statement_Test()
+    Dim a, b As Integer
+        
+    a = 8
+    b = 10
+    
+    If a > b Then
+        Debug.Print "A is greater than B"
+    Else
+        Debug.Print "B is greater than A"
+    End If
+End Sub
+```
+
+Output:
+
+```
+B is greater than A
+```
+
+### 8.3. If ElseIf Else Statement
+
+Example:
+
+```vbnet
+Private Sub Statement_Test()
+    Dim a, b As Integer
+        
+    a = 10
+    b = 10
+    
+    If a > b Then
+        Debug.Print "A is greater than B"
+    ElseIf b > a Then
+        Debug.Print "B is greater than A"
+    Else
+        Debug.Print "A is equal to B"
+    End If
+End Sub
+
+```
+
+Output:
+
+```
+A is equal to B
+```
+
+### 8.4. Switch Statement
+
+Example:
+
+```vbnet
+Private Sub Statement_Test()
+    Dim selection As Integer
+    selection = 1
+  
+    Select Case selection
+        Case 1
+            Debug.Print "Selected first case"
+        Case 2
+            Debug.Print "Selected second case"
+        Case 3
+            Debug.Print "Selected third case"
+        Case Else
+            Debug.Print "Selected unknown case"
+    End Select
+End Sub
+```
+
+Output:
+
+```
+Selected first case
+```
