@@ -2,11 +2,11 @@
 
 ## Table of contents
 
-1. [Data types](#1.-Data-types)
-2. [Variables](#2.-Variables)
-3. [Functions](#3.-Functions)  
-3.1. [Function](#3.1.-Function)  
-3.2. [Sub](#3.2.-Sub)
+1. [Data types](#1-Data-types)
+2. [Variables](#2-Variables)
+3. [Functions](#3-Functions)  
+3.1. [Function](#31.-Function)  
+3.2. [Sub](#32.-Sub)
 
 ### 1. Data types
 
