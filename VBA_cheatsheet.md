@@ -23,6 +23,8 @@
 8.2. [If Else Statement](#82-If-Else-Statement)  
 8.3. [If ElseIf Else Statement](#83-If-ElseIf-Else-Statement)  
 8.4. [Switch Statement](#84-Switch-Statement)
+9. [Comparison Operators](#9-Comparison-Operators)
+10. [Logical Operators](#10-Logical-Operators)
 
 ## 1. Data types
 
@@ -399,3 +401,23 @@ Output:
 ```
 Selected first case
 ```
+
+## 9. Comparison Operators
+
+| Operator | Description                     | Example        | Output                                                                |
+|----------|---------------------------------|----------------|-----------------------------------------------------------------------|
+| =        | Equal, both values are the same | If a = b Then  | Returns true if two values are equal, otherwise returns false         |
+| <        | Less than                       | If a < b Then  | Returns true if a is less than b, otherwise returns false             |
+| >        | Greater than                    | If a > b Then  | Returns true if a is greater than b, otherwise returns false          |
+| <>       | Not equal to                    | If a <> b Then | Returns true if a and b are not equal, otherwise returns false        |
+| <=       | Less than or equal to           | If a <= b Then | Returns true if a is less or equal than b, otherwise returns false    |
+| >=       | Greater than or equal to        | If a >= b Then | Returns true if a is greater or equal than b, otherwise returns false |
+
+## 10. Logical Operators
+
+| Operator | Description                                                                                                                          | Example                     | Result |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|--------|
+| And      | To return true, all of conditions must be true, otherwise returns false                                                              | If 1 = 1 **And** 0 = 1 Then | false  |
+| Or       | To return true, one of conditions must be true, rest may be false                                                                    | If 1 = 1 **Or** 0 = 1 Then  | true   |
+| Not      | Reverse logical state                                                                                                                | **Not**(1 = 1 Or 0 = 1)     | false  |
+| Xor      | Combination of **Not** and **Or** operator. If one, and only one of conditions is true, result will be true, otherwise returns false | If 1 = 1 **Xor** 0 = 1 Then | true   |
